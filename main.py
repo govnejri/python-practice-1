@@ -1,0 +1,24 @@
+name = input("Enter driver name:")
+distance = float(input("Enter distance (km):"))
+fuel_consumption = float(input("Enter fuel consumption (L/100km):"))
+fuel_price = float(input("Enter fuel price (KZT/L):"))
+
+litres_needed = distance * fuel_consumption / 100
+fuel_cost = litres_needed * fuel_price
+cost_per_km = fuel_cost / distance
+
+print("=" * 30)
+print(f"     ROAD TRIP SUMMARY")
+print("=" * 30)
+print(f"Driver: {name}")
+print(f"Distance: {distance:.2f} km")
+print(f"Consumption: {fuel_consumption:.2f} L/100km")
+print(f"Fuel price: {fuel_price:.2f} KZT/L")
+print("-" * 30)
+print(f"Litres needed: {litres_needed:.2f} L")
+print(f"Fuel cost: {fuel_cost:.2f} KZT")
+print(f"Cost per km: {cost_per_km:.2f} KZT")
+print("=" * 30)
+
+print("Trip longer than 300 km:", distance > 300)
+print("Fuel cost above 5000 KZT:", fuel_cost > 5000) 
